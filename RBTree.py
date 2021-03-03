@@ -124,10 +124,11 @@ class Tree:
         plt.axis('off')
         plt.xlim((-1, nodes["len"] + 1))
         plt.ylim((deepth + 2, -1))
-        plt.show()
 
         if save:
             plt.savefig("./RBTree.png")
+
+        plt.show()
 
 
 class RBTree(Tree):
@@ -307,4 +308,4 @@ if __name__ == '__main__':
     values = [9, 5, 4, 6, 2, 8, 7, 3, 1, 0]
     for v in values:
         rbt.insert(v)
-    rbt.plot()
+    rbt.plot(save=True)
